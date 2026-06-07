@@ -87,13 +87,25 @@ figure { margin: 0; } figcaption { margin-top: .65rem; color: var(--muted); font
 .report-gallery img { max-height: 520px; object-fit: contain; background: #fff; }
 .content-grid, .prompt-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1rem; }
 .analysis-box { padding: 1.25rem; background: var(--surface-alt); border: 1px solid var(--border); border-radius: 12px; }
-.prompt-box { padding: 1.25rem; background: #ffffff; border: 1px solid var(--border); border-radius: 12px; }
-.analysis-box { border-left: 4px solid var(--green); } .prompt-box.improved { background: var(--accent-soft); border-color: #bfdbfe; }
+/* Khối bọc ngoài (Hộp chứa) */
+.prompt-box { 
+    padding: 1.25rem; 
+    background: #ffffff !important; 
+    border: 1px solid var(--border); 
+    border-radius: 12px; 
+}
+
+/* Ô cải tiến: Không dùng màu nền nữa mà dùng màu viền Teal để phân biệt */
+.prompt-box.improved { 
+    border: 2px solid var(--accent) !important; 
+}
+
+/* Ô chứa đoạn Prompt mẫu bên trong: Chuyển hẳn sang nền trắng chữ đen */
 .prompt-sample { 
     margin: 1rem 0; 
     padding: 1rem 1.1rem; 
-    color: var(--text); 
-    background: #ffffff; 
+    color: var(--text) !important; 
+    background: #ffffff !important; 
     border: 1px solid var(--border); 
     border-radius: 10px; 
     white-space: pre-wrap; 
