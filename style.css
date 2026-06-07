@@ -86,7 +86,8 @@ figure { margin: 0; } figcaption { margin-top: .65rem; color: var(--muted); font
 .report-gallery figure { padding: .75rem; background: var(--surface-alt); border: 1px solid var(--border); border-radius: 12px; }
 .report-gallery img { max-height: 520px; object-fit: contain; background: #fff; }
 .content-grid, .prompt-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1rem; }
-.analysis-box, .prompt-box { padding: 1.25rem; background: var(--surface-alt); border: 1px solid var(--border); border-radius: 12px; }
+.analysis-box { padding: 1.25rem; background: var(--surface-alt); border: 1px solid var(--border); border-radius: 12px; }
+.prompt-box { padding: 1.25rem; background: #ffffff; border: 1px solid var(--border); border-radius: 12px; }
 .analysis-box { border-left: 4px solid var(--green); } .prompt-box.improved { background: var(--accent-soft); border-color: #bfdbfe; }
 .prompt-sample { margin: 1rem 0; padding: 1rem 1.1rem; color: #dbeafe; background: #142033; border-radius: 10px; white-space: pre-wrap; }
 .check-list, .principle-list { padding-left: 1.25rem; } .check-list li, .principle-list li { margin-bottom: .7rem; }
