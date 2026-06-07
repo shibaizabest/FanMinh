@@ -3,115 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Task 3 - Viết prompt hiệu quả cho các tác vụ học tập.">
-    <title>Task 3 | Viết Prompt hiệu quả</title>
-    <link rel="stylesheet" href="style.css?v=20260608">
-    <link rel="stylesheet" href="effects.css?v=20260608h">
-    <script src="effects.js?v=20260608h" defer></script>
+    <link rel="stylesheet" href="style.css?v=20260608-style2">
+    <link rel="stylesheet" href="effects.css?v=20260608-block">
+    <script src="effects.js?v=20260608-block" defer></script>
+    <meta name="description" content="So sánh prompt cơ bản, cải tiến và nâng cao cho tóm tắt học thuật, giải thích khái niệm và tạo câu hỏi ôn tập.">
+    <title>Task 03 | Viết prompt hiệu quả với C.R.E.A.T.E</title>
 </head>
 <body>
     <a class="skip-link" href="#main-content">Đi đến nội dung chính</a>
-    <header class="site-header"><div class="container nav-wrapper"><a class="brand" href="index.html">Lưu Quang Thịnh</a><nav aria-label="Điều hướng chính"><ul class="nav-list"><li><a href="index.html">Home</a></li><li><a class="active" href="portfolio.html">Projects</a></li><li><a href="conclusion.html">Conclusion</a></li></ul></nav></div></header>
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a class="brand" href="index.html">Phan Minh</a>
+            <nav aria-label="Điều hướng chính">
+                <ul class="nav-list">
+                    <li><a  href="index.html">Home</a></li>
+                    <li><a class="active" aria-current="page" href="portfolio.html">Projects</a></li>
+                    <li><a  href="conclusion.html">Conclusion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <main id="main-content">
-        <section class="report-hero"><div class="container"><p class="eyebrow">Task 03 / Prompt Engineering</p><h1>Viết Prompt hiệu quả cho các tác vụ học tập</h1><p class="lead">Thử nghiệm từ zero-shot đến Role-prompting, Analogy và Negative Prompting trên ba bài toán học thuật.</p><div class="report-kicker"><span>Lưu Quang Thịnh</span><span>MSV: 25020407</span><span>3 tác vụ thử nghiệm</span><span>Framework C.O.R.E</span></div></div></section>
-        <div class="container report-layout">
-            <aside class="report-toc"><strong>Nội dung</strong><ul><li><a href="#intro">Giới thiệu</a></li><li><a href="#mlops">Tóm tắt MLOps</a></li><li><a href="#vector">Vector Space</a></li><li><a href="#python">Đề thi Python</a></li><li><a href="#analysis">Phân tích</a></li><li><a href="#core">Mô hình C.O.R.E</a></li></ul></aside>
-            <div class="report-body">
-                <section id="intro" class="report-section">
-                    <h2>Giới thiệu</h2>
-                    <p>Các Mô hình Ngôn ngữ Lớn đang thay đổi cách tiếp thu kiến thức và xử lý thông tin. Tuy nhiên, chất lượng đầu ra phụ thuộc trực tiếp vào câu lệnh đầu vào. Báo cáo thử nghiệm có hệ thống các cấp độ prompt, từ zero-shot đến Role-prompting, Few-shot, Analogy và ràng buộc phủ định.</p>
-                    <p>Ba tác vụ được lựa chọn gồm tóm tắt tài liệu học thuật, giải thích khái niệm phức tạp và tạo bộ câu hỏi ôn tập. Mỗi tác vụ sử dụng ba phiên bản prompt để đo sự thay đổi về cấu trúc, độ chính xác và giá trị sư phạm.</p>
-                </section>
-
-                <section id="mlops" class="report-section">
-                    <h2>Tác vụ 1: Tóm tắt tài liệu MLOps</h2>
-                    <p><strong>Mục tiêu:</strong> Trích xuất kiến trúc, phương pháp xử lý và kết quả thực nghiệm của nghiên cứu về MLOps Pipeline tự động xử lý Data Drift.</p>
-                    <p><strong>Thách thức:</strong> Tài liệu có mật độ thuật ngữ cao như Data Drift, Model Registry và CI/CD/CT. Prompt yếu dễ gây hallucination, dịch sai thuật ngữ hoặc bỏ sót số liệu.</p>
-                    <h3>Prompt cơ bản</h3>
-                    <pre class="prompt-sample">Hãy tóm tắt bài báo nghiên cứu về MLOps sau đây:
-Văn bản nghiên cứu gốc được đưa vào tại đây.</pre>
-                    <h3>Prompt cải tiến</h3>
-                    <pre class="prompt-sample">Hãy tóm tắt bài báo MLOps trong khoảng 150-200 chữ.
-Chia thành 3 phần:
-1. Vấn đề nghiên cứu
-2. Phương pháp đề xuất, cụ thể về pipeline
-3. Kết quả đạt được</pre>
-                    <h3>Prompt nâng cao</h3>
-                    <pre class="prompt-sample">Đóng vai Kỹ sư MLOps Senior đang báo cáo cho CTO.
-Giữ nguyên các thuật ngữ CI/CD/CT, Data Drift, Model Registry và trigger.
-Trình bày bằng bullet points theo 4 mục: Bối cảnh, Điểm nghẽn kỹ thuật,
-Kiến trúc giải pháp và Đánh giá hiệu năng.
-Bỏ qua phần dẫn dắt, đi thẳng vào số liệu.</pre>
-                    <div class="table-scroll"><table class="report-table"><thead><tr><th>Tiêu chí</th><th>Cơ bản</th><th>Cải tiến</th><th>Nâng cao</th></tr></thead><tbody>
-                        <tr><td>Cấu trúc</td><td>Đoạn văn đặc chữ.</td><td>Ba phần rõ nhưng còn diễn xuôi.</td><td>Bullet points trực quan, tách tầng kiến trúc.</td></tr>
-                        <tr><td>Nội dung</td><td>Lan man, thiếu trigger và số liệu.</td><td>Đầy đủ hơn nhưng đôi lúc dịch thuật ngữ chưa chuẩn.</td><td>Làm rõ Kubernetes, MLflow, giảm 45% time-to-market và độ chính xác trên 92%.</td></tr>
-                        <tr><td>Chính xác kỹ thuật</td><td>Trung bình.</td><td>Tốt.</td><td>Xuất sắc, giữ nguyên ngữ cảnh chuyên môn.</td></tr>
-                    </tbody></table></div>
-                </section>
-
-                <section id="vector" class="report-section">
-                    <h2>Tác vụ 2: Giải thích Không gian Vector</h2>
-                    <p><strong>Mục tiêu:</strong> Chuyển một định nghĩa Đại số tuyến tính trừu tượng thành hình ảnh dễ hiểu, giúp sinh viên nắm bản chất thay vì học thuộc tiên đề.</p>
-                    <p><strong>Thách thức:</strong> Nếu thiếu định hướng, AI thường liệt kê 8-10 tiên đề và ký hiệu toán học, gây quá tải nhận thức cho người mới.</p>
-                    <h3>Ba phiên bản prompt</h3>
-                    <div class="prompt-grid">
-                        <article class="prompt-box"><p class="box-label">Cơ bản</p><p>“Hãy giải thích khái niệm Không gian Vector trong Đại số tuyến tính.”</p></article>
-                        <article class="prompt-box"><p class="box-label">Cải tiến</p><p>Giải thích cho người mới bắt đầu và đưa ra một ví dụ thực tế thay vì chỉ liệt kê tiên đề.</p></article>
-                    </div>
-                    <pre class="prompt-sample">Đóng vai giảng viên Toán học sáng tạo.
-Giải thích Vector Space cho sinh viên năm nhất.
-Không liệt kê 8-10 tiên đề.
-Dùng ẩn dụ “vũ trụ khép kín”, nơi vector tuân thủ hai đạo luật:
-phép cộng và phép nhân vô hướng mà không bị văng ra ngoài.
-Thêm ví dụ trên Oxy và trình bày theo:
-Bản chất cốt lõi - Phân tích qua ẩn dụ - Ứng dụng thực tiễn.</pre>
-                    <div class="table-scroll"><table class="report-table"><thead><tr><th>Tiêu chí</th><th>Cơ bản</th><th>Cải tiến</th><th>Nâng cao</th></tr></thead><tbody>
-                        <tr><td>Trực quan</td><td>Rất thấp, nhiều ký hiệu và tiên đề.</td><td>Dễ hiểu hơn, có ví dụ lực hoặc mũi tên.</td><td>Ẩn dụ “vũ trụ khép kín” làm khái niệm hữu hình.</td></tr>
-                        <tr><td>Phù hợp nhận thức</td><td>Giống sách giáo khoa.</td><td>Ngôn ngữ đơn giản hơn.</td><td>Tập trung vào tính đóng và cách tiếp cận sư phạm.</td></tr>
-                        <tr><td>Trình bày</td><td>Liệt kê tuyến tính.</td><td>Mạch lạc nhưng ít điểm nhấn.</td><td>Tuân thủ ba đề mục như một giáo án.</td></tr>
-                    </tbody></table></div>
-                </section>
-
-                <section id="python" class="report-section">
-                    <h2>Tác vụ 3: Tạo câu hỏi ôn tập Python</h2>
-                    <p><strong>Mục tiêu:</strong> Tạo ngân hàng câu hỏi đo khả năng đọc code, phân tích thuật toán và debug, thay vì chỉ kiểm tra cú pháp.</p>
-                    <p><strong>Thách thức:</strong> AI thường tạo câu hỏi nhận biết quá dễ và tự chèn comment vào code, vô tình làm lộ gợi ý.</p>
-                    <h3>Prompt nâng cao</h3>
-                    <pre class="prompt-sample">Đóng vai Giảng viên khoa CNTT đang ra đề cuối kỳ Python.
-Tạo 3 câu trắc nghiệm mức Vận dụng cao.
-Dạng bài: phân tích code, dự đoán output hoặc tìm lỗi.
-Không được dùng bất kỳ comment nào trong code.
-Trình bày bảng gồm: STT, câu hỏi kèm code, 4 lựa chọn,
-đáp án đúng và giải thích phương án nhiễu.</pre>
-                    <figure class="inline-evidence"><img src="assets/images/task-3.jpg" alt="Kết quả prompt nâng cao tạo đề Python"><figcaption>Kết quả có bảng câu hỏi, lựa chọn, đáp án và giải thích phương án nhiễu.</figcaption></figure>
-                    <div class="table-scroll"><table class="report-table"><thead><tr><th>Tiêu chí</th><th>Cơ bản</th><th>Cải tiến</th><th>Nâng cao</th></tr></thead><tbody>
-                        <tr><td>Độ khó</td><td>Câu hỏi học thuộc.</td><td>Đúng phạm vi List, Dictionary, Loop nhưng còn thiên lý thuyết.</td><td>Yêu cầu trace code, phù hợp mức vận dụng cao.</td></tr>
-                        <tr><td>Độ sạch dữ liệu</td><td>Format tự do.</td><td>Rõ hơn nhưng khó nhập LMS.</td><td>Bảng chuẩn hóa, code không comment.</td></tr>
-                        <tr><td>Giá trị sư phạm</td><td>Chỉ có đáp án.</td><td>Chỉ có đáp án.</td><td>Giải thích cả nguyên nhân phương án nhiễu sai.</td></tr>
-                    </tbody></table></div>
-                </section>
-
-                <section id="analysis" class="report-section">
-                    <h2>Nguyên nhân tạo nên prompt hiệu quả</h2>
-                    <h3>Định hình không gian xác suất</h3><p>Role-prompting tạo một điểm neo ngữ cảnh. Vai trò Kỹ sư MLOps hoặc Giảng viên giúp mô hình thu hẹp miền từ vựng và tạo phản hồi chuyên sâu hơn.</p>
-                    <h3>Tối ưu cơ chế chú ý bằng ràng buộc phủ định</h3><p>Các lệnh “không dùng comment”, “không liệt kê tiên đề” hoặc “bỏ qua phần dẫn dắt” hoạt động như bộ lọc nhiễu, ép AI tập trung vào dữ liệu cốt lõi.</p>
-                    <h3>Kiểm soát GIGO</h3><p>Khi đầu vào đi theo chuỗi Dữ liệu nguồn → Vai trò xử lý → Ràng buộc → Định dạng đầu ra, AI chuyển từ công cụ tìm kiếm thụ động thành hệ thống xử lý dữ liệu có kiểm soát.</p>
-                    <div class="report-callout"><p><strong>Kết luận:</strong> Prompt Engineering là sự chuyển đổi từ “đặt câu hỏi” sang “điều khiển và định hướng logic” của hệ thống.</p></div>
-                </section>
-
-                <section id="core" class="report-section">
-                    <h2>Framework C.O.R.E</h2>
-                    <h3>C - Context & Character</h3><p>Xác định bối cảnh và vai trò để AI không tự suy đoán. Vai trò phù hợp kích hoạt đúng ngôn ngữ chuyên ngành.</p>
-                    <h3>O - Objective & Output Format</h3><p>Tách rõ nhiệm vụ với cách trình bày. Định dạng bảng, bullet point và giới hạn độ dài giúp đầu ra chuẩn hóa, dễ dùng.</p>
-                    <h3>R - Restrictions</h3><p>Chỉ rõ điều AI không được làm để loại bỏ thói quen phản hồi mặc định và hạn chế hallucination.</p>
-                    <h3>E - Examples & Engagement</h3><p>Dùng ví dụ, Few-shot hoặc Analogy để phá lối diễn đạt giáo khoa và tăng khả năng tiếp thu.</p>
-                    <p>Áp dụng C.O.R.E giúp biến AI thành trợ lý học thuật có tính chính xác và cá nhân hóa cao hơn, nhưng người dùng vẫn phải đánh giá kết quả.</p>
-                    <div class="download-panel"><p><strong>Bản đầy đủ:</strong> Ba bộ prompt, ảnh kết quả và bảng so sánh chi tiết.</p><a class="button button-small" href="assets/documents/task-3.docx">Xem / tải báo cáo</a></div>
-                </section>
-                <nav class="task-pagination"><a href="task-2.html">← Task 2</a><a href="task-4.html">Task 4 →</a></nav>
+        <section class="report-hero">
+            <div class="container">
+                <p class="eyebrow">Task 03 / Prompt Engineering</p>
+                <h1>Viết prompt hiệu quả với C.R.E.A.T.E</h1>
+                <p class="lead">So sánh prompt cơ bản, cải tiến và nâng cao cho tóm tắt học thuật, giải thích khái niệm và tạo câu hỏi ôn tập.</p>
+                <div class="report-kicker"><span>Phan Minh</span><span>25020277</span><span>K70I-IT5</span></div>
             </div>
+        </section>
+        <div class="container report-layout">
+            <aside class="report-toc"><strong>Mục lục</strong><ul><li><a href="#overview">Tổng quan</a></li><li><a href="#process">Quy trình</a></li><li><a href="#outcome">Kết quả</a></li><li><a href="#reflection">Bài học</a></li></ul></aside>
+            <article class="report-body">
+                <section id="overview" class="report-section"><h2>Tổng quan</h2><p>Task 3 thử nghiệm ba mức prompt: cơ bản, cải tiến và nâng cao. Các tác vụ gồm tóm tắt tài liệu học thuật, giải thích khái niệm phức tạp và tạo bộ câu hỏi ôn tập.</p></section>
+                <section id="process" class="report-section"><h2>Ba cấp độ prompt</h2><div class="prompt-grid"><div class="prompt-box"><h3>Cơ bản</h3><p class="prompt-sample">Hãy tóm tắt bài báo khoa học sau đây cho tôi: [Dán nội dung]</p><p>Nhanh nhưng thiếu bối cảnh, dễ tạo kết quả chung chung.</p></div><div class="prompt-box improved"><h3>Cải tiến</h3><p class="prompt-sample">Tập trung vào mục tiêu nghiên cứu, phương pháp và kết quả chính. Viết dạng bullet points, khoảng 200 chữ.</p><p>Rõ mục tiêu và định dạng nên đầu ra dễ dùng hơn.</p></div><div class="prompt-box"><h3>Nâng cao</h3><p class="prompt-sample">Bạn là chuyên gia phân tích dữ liệu nghiên cứu... xác định vấn đề cốt lõi, luận điểm hỗ trợ và kết luận.</p><p>Có vai trò, quy trình và đối tượng đọc nên kết quả chặt chẽ hơn.</p></div></div></section>
+                <section id="outcome" class="report-section"><h2>Kết quả so sánh</h2><div class="table-scroll"><table class="report-table"><thead><tr><th>Loại prompt</th><th>Đặc điểm kết quả</th><th>Mức hiệu quả</th></tr></thead><tbody><tr><td>Cơ bản</td><td>Thông tin chung, đôi khi quá ngắn hoặc thiếu ngữ cảnh.</td><td>Thấp, cần chỉnh sửa nhiều.</td></tr><tr><td>Cải tiến</td><td>Đúng trọng tâm, định dạng rõ, dễ theo dõi.</td><td>Trung bình đến cao.</td></tr><tr><td>Nâng cao</td><td>Logic chặt chẽ, văn phong chuyên nghiệp, độ chính xác tốt hơn.</td><td>Rất cao khi nhiệm vụ phức tạp.</td></tr></tbody></table></div></section>
+                <section id="reflection" class="report-section"><h2>Nguyên tắc C.R.E.A.T.E</h2><ul class="principle-list"><li><strong>Context:</strong> cung cấp bối cảnh.</li><li><strong>Role:</strong> giao vai trò cho AI.</li><li><strong>Explicit Instructions:</strong> chỉ dẫn rõ ràng.</li><li><strong>Academic/Tone:</strong> xác định giọng điệu.</li><li><strong>Task:</strong> nêu mục tiêu cuối.</li><li><strong>Examples:</strong> đưa mẫu đầu ra mong muốn.</li></ul></section>
+                <div class="download-panel">
+                    <p>Tài liệu gốc để đối chiếu: Word và PDF.</p>
+                    <div class="download-actions">
+                        <a class="button button-small" href="assets/documents/task3.docx">DOCX</a>
+                        <a class="button button-small ghost" href="assets/documents/task3.pdf">PDF</a>
+                    </div>
+                </div>
+                <div class="task-pagination"><a href="task-2.html">← Task 02</a><a href="task-4.html">Task 04 →</a></div>
+            </article>
         </div>
     </main>
-    <footer class="site-footer"><div class="container footer-wrapper"><p>&copy; 2026 Lưu Quang Thịnh.</p><ul class="social-links"><li><a href="https://www.facebook.com/thinh.luuquang.33" target="_blank" rel="noopener noreferrer">Facebook</a></li><li><a href="https://github.com/shibaizabest" target="_blank" rel="noopener noreferrer">GitHub</a></li><li><a href="mailto:25020407@vnu.edu.vn">Email</a></li></ul></div></footer>
+    <footer class="site-footer">
+        <div class="container footer-wrapper">
+            <p>&copy; 2026 Phan Minh. Portfolio học tập VNU1001.</p>
+            <ul class="social-links" aria-label="Liên kết hồ sơ">
+                <li><a href="mailto:25020277@vnu.edu.vn">Email</a></li>
+                <li><a href="portfolio.html">Tasks</a></li>
+                <li><a href="conclusion.html">Reflection</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>

@@ -3,143 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Task 2 - Tìm kiếm và đánh giá thông tin về AI nhận diện thực phẩm.">
-    <title>Task 2 | Tìm kiếm và đánh giá thông tin</title>
-    <link rel="stylesheet" href="style.css?v=20260608">
-    <link rel="stylesheet" href="effects.css?v=20260608h">
-    <script src="effects.js?v=20260608h" defer></script>
+    <link rel="stylesheet" href="style.css?v=20260608-style2">
+    <link rel="stylesheet" href="effects.css?v=20260608-block">
+    <script src="effects.js?v=20260608-block" defer></script>
+    <meta name="description" content="Tìm kiếm, đánh giá và tổng hợp nguồn học thuật về các mô hình ML/DL dùng cho Malware Detection.">
+    <title>Task 02 | Machine Learning trong phát hiện mã độc</title>
 </head>
 <body>
     <a class="skip-link" href="#main-content">Đi đến nội dung chính</a>
-    <header class="site-header"><div class="container nav-wrapper"><a class="brand" href="index.html">Lưu Quang Thịnh</a><nav aria-label="Điều hướng chính"><ul class="nav-list"><li><a href="index.html">Home</a></li><li><a class="active" href="portfolio.html">Projects</a></li><li><a href="conclusion.html">Conclusion</a></li></ul></nav></div></header>
-
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a class="brand" href="index.html">Phan Minh</a>
+            <nav aria-label="Điều hướng chính">
+                <ul class="nav-list">
+                    <li><a  href="index.html">Home</a></li>
+                    <li><a class="active" aria-current="page" href="portfolio.html">Projects</a></li>
+                    <li><a  href="conclusion.html">Conclusion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <main id="main-content">
         <section class="report-hero">
             <div class="container">
-                <p class="eyebrow">Task 02 / Nghiên cứu thông tin</p>
-                <h1>AI nhận diện thực phẩm và ước lượng lượng calo</h1>
-                <p class="lead">Xây dựng chiến lược tìm kiếm, phân loại và đánh giá độ tin cậy của nguồn học thuật về dietary assessment bằng Computer Vision.</p>
-                <div class="report-kicker"><span>Lưu Quang Thịnh</span><span>MSV: 25020407</span><span>K70I-IT5</span><span>Phạm vi: 2014-2024</span></div>
+                <p class="eyebrow">Task 02 / Information literacy</p>
+                <h1>Machine Learning trong phát hiện mã độc</h1>
+                <p class="lead">Tìm kiếm, đánh giá và tổng hợp nguồn học thuật về các mô hình ML/DL dùng cho Malware Detection.</p>
+                <div class="report-kicker"><span>Phan Minh</span><span>25020277</span><span>K70I-IT5</span></div>
             </div>
         </section>
-
         <div class="container report-layout">
-            <aside class="report-toc"><strong>Nội dung</strong><ul><li><a href="#topic">Chủ đề</a></li><li><a href="#strategy">Chiến lược</a></li><li><a href="#evaluation">Đánh giá nguồn</a></li><li><a href="#analysis">Phân tích</a></li><li><a href="#references">Tài liệu tham khảo</a></li></ul></aside>
-            <div class="report-body">
-                <section id="topic" class="report-section">
-                    <h2>Lựa chọn chủ đề và phạm vi</h2>
-                    <h3>Lý do lựa chọn</h3>
-                    <p>Ứng dụng AI vào chăm sóc sức khỏe là xu hướng toàn cầu. Nhận diện món ăn và theo dõi dinh dưỡng tự động có thể thay thế việc ghi chép thủ công, từ đó giảm sai số trong dietary assessment.</p>
-                    <h3>Phạm vi tìm kiếm</h3>
-                    <p>Nghiên cứu tập trung vào Deep Learning, đặc biệt là CNN và Transformer trong giai đoạn 2014-2024. Bài toán không chỉ phân loại hình ảnh mà còn phải ước lượng thể tích 3D từ ảnh 2D để suy ra khối lượng và lượng calo.</p>
-                    <div class="report-callout"><p><strong>Thách thức:</strong> Occlusion, món ăn hỗn hợp, khác biệt khẩu phần và thiếu thông tin chiều sâu khiến việc nhận diện và ước lượng thể tích cần mô hình tối ưu cùng bộ dữ liệu lớn.</p></div>
-                </section>
-
-                <section id="strategy" class="report-section">
-                    <h2>Chiến lược tìm kiếm thông tin</h2>
-                    <ul class="check-list">
-                        <li><strong>Cơ sở dữ liệu:</strong> Google Scholar, IEEE Xplore, ScienceDirect.</li>
-                        <li><strong>Từ khóa:</strong> <code>Food recognition deep learning</code>, <code>Dietary assessment computer vision</code>, <code>Food calorie estimation 3D</code>.</li>
-                        <li><strong>Tạp chí và hội nghị:</strong> IEEE TPAMI, CVPR, ECCV.</li>
-                        <li><strong>Sách nền tảng:</strong> Deep Learning và Computer Vision.</li>
-                        <li><strong>Nguồn mở:</strong> WHO, arXiv, Kaggle và GitHub.</li>
-                        <li><strong>Dữ liệu thực hành:</strong> Food-101 dùng để huấn luyện và đánh giá mô hình.</li>
-                    </ul>
-                    <h3>Toán tử tìm kiếm đã áp dụng</h3>
-                    <div class="table-scroll">
-                        <table class="report-table">
-                            <thead>
-                                <tr>
-                                    <th>Toán tử</th>
-                                    <th>Truy vấn mẫu</th>
-                                    <th>Mục đích sử dụng</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><code>"..."</code></td>
-                                    <td><code>"food calorie estimation" "deep learning"</code></td>
-                                    <td>Tìm chính xác cụm từ liên quan đến ước lượng calo bằng AI, giảm kết quả lan man.</td>
-                                </tr>
-                                <tr>
-                                    <td><code>site:</code></td>
-                                    <td><code>food recognition deep learning site:ieee.org</code></td>
-                                    <td>Ưu tiên nguồn học thuật đáng tin cậy từ IEEE hoặc các tổ chức chuyên ngành.</td>
-                                </tr>
-                                <tr>
-                                    <td><code>filetype:</code></td>
-                                    <td><code>"dietary assessment" computer vision filetype:pdf</code></td>
-                                    <td>Tìm báo cáo, bài báo hoặc tài liệu PDF có cấu trúc học thuật rõ ràng.</td>
-                                </tr>
-                                <tr>
-                                    <td><code>OR</code></td>
-                                    <td><code>"food recognition" OR "food classification"</code></td>
-                                    <td>Mở rộng phạm vi bằng các thuật ngữ tương đương trong lĩnh vực Computer Vision.</td>
-                                </tr>
-                                <tr>
-                                    <td><code>-</code></td>
-                                    <td><code>"food recognition" -restaurant -menu</code></td>
-                                    <td>Loại bỏ kết quả thương mại hoặc nội dung không liên quan đến nghiên cứu AI.</td>
-                                </tr>
-                            </tbody>
-                        </table>
+            <aside class="report-toc"><strong>Mục lục</strong><ul><li><a href="#overview">Tổng quan</a></li><li><a href="#process">Quy trình</a></li><li><a href="#outcome">Kết quả</a></li><li><a href="#reflection">Bài học</a></li></ul></aside>
+            <article class="report-body">
+                <section id="overview" class="report-section"><h2>Tổng quan</h2><p>Báo cáo nghiên cứu chủ đề ứng dụng Học máy trong phát hiện mã độc trên Windows. Phạm vi gồm học máy có giám sát, Random Forest, SVM, Deep Learning và phân tích đặc trưng tĩnh/động của tệp thực thi.</p></section>
+                <section id="process" class="report-section"><h2>Phương pháp tìm kiếm</h2><p>Nguồn được thu thập từ Google Scholar, IEEE Xplore, ACM Digital Library, tạp chí chuyên ngành, sách chuyên khảo và blog bảo mật từ các tổ chức công nghệ. Tài liệu được đánh giá theo độ tin cậy, tính học thuật và khả năng cập nhật thực tiễn.</p><div class="table-scroll"><table class="report-table"><thead><tr><th>Nguồn</th><th>Loại</th><th>Độ tin cậy</th><th>Vai trò</th></tr></thead><tbody><tr><td>ACM Computing Surveys</td><td>Tạp chí khoa học</td><td>5/5</td><td>Nền tảng nghiên cứu và tổng quan học thuật.</td></tr><tr><td>Deep Learning - MIT Press</td><td>Sách chuyên khảo</td><td>5/5</td><td>Cơ sở lý thuyết cho mạng nơ-ron sâu.</td></tr><tr><td>IEEE Xplore</td><td>CSDL học thuật</td><td>5/5</td><td>Bài báo kỹ thuật có phản biện.</td></tr><tr><td>NIST SP 800-83</td><td>Tổ chức tiêu chuẩn</td><td>4/5</td><td>Khung vận hành phòng chống mã độc.</td></tr><tr><td>Microsoft Security Blog</td><td>Nguồn thực tiễn</td><td>3/5</td><td>Cập nhật xu hướng tấn công trong doanh nghiệp.</td></tr></tbody></table></div></section>
+                <section id="outcome" class="report-section"><h2>Kết quả phân tích</h2><p>Lĩnh vực phát hiện mã độc đang chuyển từ phương pháp dựa trên chữ ký sang mô hình học máy và Deep Learning như CNN, RNN. Tài liệu học thuật cung cấp phương pháp luận, còn nguồn doanh nghiệp giúp nhìn thấy bối cảnh mã độc mới trong thực tế.</p><ul class="check-list"><li>ML giúp nhận diện biến thể mã độc chưa có chữ ký.</li><li>Phân tích tĩnh nhanh nhưng có thể bị né tránh bằng kỹ thuật obfuscation.</li><li>Phân tích động giàu ngữ cảnh hơn nhưng tốn tài nguyên.</li></ul></section>
+                <section id="reflection" class="report-section"><h2>Bài học</h2><p>Tìm kiếm thông tin hiệu quả không dừng ở việc gom nhiều nguồn. Quan trọng hơn là phân loại nguồn, hiểu giới hạn từng loại tài liệu và kết hợp lý thuyết với thực tiễn ngành.</p></section>
+                <div class="download-panel">
+                    <p>Tài liệu gốc để đối chiếu: Word và PDF.</p>
+                    <div class="download-actions">
+                        <a class="button button-small" href="assets/documents/task2.docx">DOCX</a>
+                        <a class="button button-small ghost" href="assets/documents/task2.pdf">PDF</a>
                     </div>
-                    <p>Các toán tử được kết hợp linh hoạt để lọc từ kết quả rộng sang nguồn có độ tin cậy cao. Ví dụ, truy vấn <code>"image-based food calorie estimation" filetype:pdf</code> phù hợp để tìm bài nghiên cứu, trong khi <code>Food-101 dataset Kaggle</code> được dùng khi cần dữ liệu thực hành.</p>
-                    <figure class="inline-evidence">
-                        <img src="assets/images/task2-search.png" alt="Ảnh chụp kết quả tìm kiếm nâng cao về food recognition và calorie estimation">
-                        <figcaption>Kết quả tìm kiếm với toán tử dấu ngoặc kép và <code>filetype:pdf</code> cho chủ đề food recognition, deep learning và calorie estimation.</figcaption>
-                    </figure>
-                </section>
-
-                <section id="evaluation" class="report-section">
-                    <h2>Tổng hợp và đánh giá độ tin cậy</h2>
-                    <div class="table-scroll">
-                        <table class="report-table">
-                            <thead><tr><th>STT</th><th>Tài liệu / Nguồn</th><th>Phương pháp và cập nhật</th><th>Ưu, nhược điểm</th><th>Điểm</th></tr></thead>
-                            <tbody>
-                                <tr><td>1</td><td><strong>Deep learning for food recognition</strong><br>Jiang et al., IEEE TPAMI, hơn 500 trích dẫn</td><td>Tổng quan, 2020</td><td>Bao quát thuật toán hiện đại; chưa đi sâu code thực hành.</td><td>9.5/10</td></tr>
-                                <tr><td>2</td><td><strong>Food classification & volume estimation</strong><br>Lo et al., IEEE JBHI, hơn 300 trích dẫn</td><td>Đánh giá có hệ thống, 2020</td><td>Phân tích sâu ước lượng thể tích 3D; một số thuật toán nền tảng đã cũ.</td><td>9.0/10</td></tr>
-                                <tr><td>3</td><td><strong>Food-101</strong><br>Bossard et al., ECCV, hơn 2.000 trích dẫn</td><td>Đề xuất mô hình và dataset, 2014</td><td>Nguồn gốc bộ dữ liệu kinh điển; Random Forest đã bị thay thế.</td><td>8.5/10</td></tr>
-                                <tr><td>4</td><td><strong>Image-based food calorie estimation</strong><br>Ege & Yanai, ACM Multimedia</td><td>Thực nghiệm hệ thống, 2017</td><td>Kết hợp thành phần và cách nấu; dữ liệu chủ yếu là món Nhật.</td><td>8.0/10</td></tr>
-                                <tr><td>5</td><td><strong>Survey on diet-aware applications</strong><br>Min et al., IEEE TMM</td><td>Khảo sát và phân loại, 2019</td><td>Góc nhìn toàn diện; ít chi tiết kiến trúc neural network.</td><td>9.0/10</td></tr>
-                                <tr><td>6</td><td><strong>goFOOD™ AI system</strong><br>Lu et al., Elsevier</td><td>Thử nghiệm lâm sàng, 2020</td><td>Ứng dụng trực tiếp trong y tế; cỡ mẫu thực tế còn nhỏ.</td><td>8.5/10</td></tr>
-                                <tr><td>7</td><td><strong>Deep Learning</strong><br>Goodfellow, Bengio & Courville, MIT Press</td><td>Lý thuyết nền tảng, 2016</td><td>Cơ sở toán học chuẩn mực; không chuyên biệt về thực phẩm.</td><td>9.5/10</td></tr>
-                                <tr><td>8</td><td><strong>Computer Vision: Algorithms and Applications</strong><br>Szeliski, Springer</td><td>Lý thuyết và thuật toán, 2022</td><td>Cập nhật xử lý ảnh 3D; phạm vi rộng nên cần chắt lọc.</td><td>9.0/10</td></tr>
-                                <tr><td>9</td><td><strong>MobileNets</strong><br>Howard et al., arXiv, hơn 20.000 trích dẫn</td><td>Thực nghiệm mạng nhẹ, 2017</td><td>Quan trọng cho ứng dụng di động; là bản tiền ấn phẩm.</td><td>8.0/10</td></tr>
-                                <tr><td>10</td><td><strong>WHO Obesity Report</strong></td><td>Thống kê dịch tễ, 2023</td><td>Số liệu đáng tin cậy; không có nội dung kỹ thuật CNTT.</td><td>8.0/10</td></tr>
-                                <tr><td>11</td><td><strong>Food-101 Dataset trên Kaggle</strong></td><td>Kho dữ liệu cập nhật liên tục</td><td>Thiết yếu cho huấn luyện; cần làm sạch trước khi dùng.</td><td>8.5/10</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-
-                <section id="analysis" class="report-section">
-                    <h2>Phân tích và kết luận</h2>
-                    <p>Nguồn được đánh giá theo tác giả, cơ quan xuất bản, lượt trích dẫn, phương pháp nghiên cứu, năm công bố và mức độ liên quan. Tạp chí phản biện và sách chuyên khảo được ưu tiên cho lập luận kỹ thuật; WHO cung cấp bối cảnh sức khỏe; Kaggle hỗ trợ thực nghiệm.</p>
-                    <p>Các nghiên cứu cho thấy một hệ thống hoàn chỉnh cần kết hợp nhận diện món ăn, phân đoạn vùng ảnh, ước lượng thể tích và cơ sở dữ liệu dinh dưỡng. MobileNet phù hợp thiết bị di động, nhưng tính chính xác vẫn phụ thuộc chất lượng dữ liệu, góc chụp và khả năng xử lý món hỗn hợp.</p>
-                </section>
-
-                <section id="references" class="report-section">
-                    <h2>Danh mục tài liệu tham khảo</h2>
-                    <ol class="source-list">
-                        <li>Bossard, L., Guillaumin, M. & Van Gool, L. (2014). “Food-101: Mining discriminative components with random forests”, ECCV, 446-461.</li>
-                        <li>Ege, T. & Yanai, K. (2017). “Image-based food calorie estimation using knowledge on food categories, ingredients and cooking directions”, ACM Multimedia, 367-375.</li>
-                        <li>Goodfellow, I., Bengio, Y. & Courville, A. (2016). <em>Deep Learning</em>. MIT Press.</li>
-                        <li>Howard, A. G. et al. (2017). “MobileNets: Efficient convolutional neural networks for mobile vision applications”, arXiv:1704.04861.</li>
-                        <li>Jiang, S. et al. (2020). “Deep learning for food recognition and recipe analysis: A review”, IEEE TPAMI, 44(8), 3980-4001.</li>
-                        <li>Kaggle (2023). Food-101 Dataset, kaggle.com/datasets/dansbecker/food-101.</li>
-                        <li>Lo, F. P. W. et al. (2020). “Image-based food classification and volume estimation for dietary assessment: A review”, IEEE JBHI, 24(7), 1926-1939.</li>
-                        <li>Lu, Y. et al. (2020). “goFOOD™: An artificial intelligence system for dietary assessment”, Artificial Intelligence in Medicine, 102.</li>
-                        <li>Min, W. et al. (2019). “A survey on diet-aware applications”, IEEE Transactions on Multimedia, 21(7), 1710-1727.</li>
-                        <li>Szeliski, R. (2022). <em>Computer Vision: Algorithms and Applications</em>, 2nd ed., Springer.</li>
-                        <li>World Health Organization (2023). “Obesity and overweight”.</li>
-                    </ol>
-                    <div class="download-panel"><p><strong>Tài liệu gốc:</strong> Bảng đánh giá chi tiết và trích dẫn đầy đủ.</p><a class="button button-small" href="assets/documents/task-2.docx">Xem / tải báo cáo</a></div>
-                </section>
-                <nav class="task-pagination"><a href="task-1.html">← Task 1</a><a href="task-3.html">Task 3 →</a></nav>
-            </div>
+                </div>
+                <div class="task-pagination"><a href="task-1.html">← Task 01</a><a href="task-3.html">Task 03 →</a></div>
+            </article>
         </div>
     </main>
-    <footer class="site-footer"><div class="container footer-wrapper"><p>&copy; 2026 Lưu Quang Thịnh.</p><ul class="social-links"><li><a href="https://www.facebook.com/thinh.luuquang.33" target="_blank" rel="noopener noreferrer">Facebook</a></li><li><a href="https://github.com/shibaizabest" target="_blank" rel="noopener noreferrer">GitHub</a></li><li><a href="mailto:25020407@vnu.edu.vn">Email</a></li></ul></div></footer>
+    <footer class="site-footer">
+        <div class="container footer-wrapper">
+            <p>&copy; 2026 Phan Minh. Portfolio học tập VNU1001.</p>
+            <ul class="social-links" aria-label="Liên kết hồ sơ">
+                <li><a href="mailto:25020277@vnu.edu.vn">Email</a></li>
+                <li><a href="portfolio.html">Tasks</a></li>
+                <li><a href="conclusion.html">Reflection</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>

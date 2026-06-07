@@ -73,18 +73,9 @@
         const curtain = document.createElement("div");
         curtain.className = "route-curtain";
         curtain.setAttribute("aria-hidden", "true");
-        const tileCount = window.innerWidth < 700 ? 7 : 10;
-        for (let i = 0; i < tileCount; i += 1) {
-            const tile = document.createElement("span");
-            tile.className = "route-tile";
-            const top = -18 + (i * (132 / Math.max(1, tileCount - 1)));
-            const delay = i * 42;
-            const size = 25 + ((i % 3) * 5);
-            tile.style.setProperty("--tile-top", top.toFixed(1) + "vh");
-            tile.style.setProperty("--tile-delay", delay + "ms");
-            tile.style.setProperty("--tile-size", size + "vmax");
-            curtain.appendChild(tile);
-        }
+        const block = document.createElement("span");
+        block.className = "route-block";
+        curtain.appendChild(block);
         document.body.appendChild(curtain);
 
         document.querySelectorAll("a[href]").forEach((link) => {

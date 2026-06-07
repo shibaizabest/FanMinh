@@ -703,3 +703,101 @@ body::after {
         animation-duration: 520ms !important;
     }
 }
+
+/* Single block sweep transition override. */
+.route-curtain {
+    overflow: hidden;
+    background: transparent !important;
+    clip-path: none !important;
+}
+
+.route-curtain.enter,
+.route-curtain.leave {
+    opacity: 1;
+    animation: none !important;
+}
+
+.route-block {
+    position: absolute;
+    top: 50%;
+    left: -70vmax;
+    width: min(118vmax, 1320px);
+    height: min(118vmax, 1320px);
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent 34%),
+        linear-gradient(135deg, #042f2e 0%, #0f766e 42%, #be123c 100%);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 8%;
+    box-shadow:
+        0 34px 95px rgba(15, 118, 110, 0.34),
+        inset 0 0 56px rgba(255, 255, 255, 0.16);
+    opacity: 0;
+    transform: translate3d(-16vw, -50%, 0) rotate(-12deg) scale(0.95);
+}
+
+.route-block::before {
+    position: absolute;
+    inset: 12%;
+    content: "";
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: inherit;
+}
+
+.route-curtain.leave .route-block {
+    animation: block-sweep-leave 980ms var(--fx-ease) both;
+}
+
+.route-curtain.enter .route-block {
+    animation: block-sweep-enter 780ms var(--fx-ease) both;
+}
+
+@keyframes block-sweep-leave {
+    0% {
+        opacity: 0;
+        transform: translate3d(-18vw, -50%, 0) rotate(-14deg) scale(0.92);
+    }
+
+    18% {
+        opacity: 1;
+    }
+
+    55% {
+        opacity: 1;
+        transform: translate3d(52vw, -50%, 0) rotate(3deg) scale(1.05);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate3d(148vw, -50%, 0) rotate(14deg) scale(1);
+    }
+}
+
+@keyframes block-sweep-enter {
+    0% {
+        opacity: 1;
+        transform: translate3d(18vw, -50%, 0) rotate(2deg) scale(1.04);
+    }
+
+    36% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate3d(148vw, -50%, 0) rotate(14deg) scale(0.95);
+    }
+}
+
+@media (max-width: 700px) {
+    .route-block {
+        width: 138vmax;
+        height: 138vmax;
+        left: -86vmax;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .route-block {
+        animation-duration: 420ms !important;
+    }
+}
