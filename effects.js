@@ -78,6 +78,19 @@
         curtain.appendChild(block);
         document.body.appendChild(curtain);
 
+        let navigationTimer = 0;
+
+        function resetRouteTransition() {
+            if (navigationTimer) {
+                window.clearTimeout(navigationTimer);
+                navigationTimer = 0;
+            }
+            document.body.classList.remove("fx-navigating");
+            curtain.classList.remove("leave", "enter");
+        }
+
+        window.addEventListener("pageshow", resetRouteTransition);
+
         document.querySelectorAll("a[href]").forEach((link) => {
             link.addEventListener("click", (event) => {
                 if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
@@ -100,7 +113,7 @@
                 document.body.classList.add("fx-navigating");
                 curtain.classList.remove("enter");
                 curtain.classList.add("leave");
-                window.setTimeout(() => {
+                navigationTimer = window.setTimeout(() => {
                     window.location.href = target.href;
                 }, 760);
             });
