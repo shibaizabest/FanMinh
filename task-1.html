@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Task 1 - Thao tác cơ bản với tệp tin và thư mục.">
+    <title>Task 1 | Quản lý tệp và thư mục</title>
+    <link rel="stylesheet" href="style.css?v=20260608">
+    <link rel="stylesheet" href="effects.css?v=20260608h">
+    <script src="effects.js?v=20260608h" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Đi đến nội dung chính</a>
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a class="brand" href="index.html">Lưu Quang Thịnh</a>
+            <nav aria-label="Điều hướng chính">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="active" href="portfolio.html">Projects</a></li>
+                    <li><a href="conclusion.html">Conclusion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="report-hero">
+            <div class="container">
+                <p class="eyebrow">Task 01 / Báo cáo thực hành</p>
+                <h1>Thao tác cơ bản với tệp tin và thư mục</h1>
+                <p class="lead">Thực hành quản lý dữ liệu trên Windows bằng File Explorer: tạo, đổi tên, sao chép, di chuyển, xóa và khôi phục tệp.</p>
+                <div class="report-kicker">
+                    <span>Lưu Quang Thịnh</span><span>MSV: 25020407</span>
+                    <span>K70I-IT5</span><span>VNU1001_E252016</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="container report-layout">
+            <aside class="report-toc">
+                <strong>Nội dung</strong>
+                <ul>
+                    <li><a href="#overview">Tổng quan</a></li>
+                    <li><a href="#steps">Các bước thực hiện</a></li>
+                    <li><a href="#comparison">Copy và Cut</a></li>
+                    <li><a href="#evidence">Minh chứng</a></li>
+                    <li><a href="#result">Kết quả</a></li>
+                </ul>
+            </aside>
+
+            <div class="report-body">
+                <section id="overview" class="report-section">
+                    <h2>Tổng quan bài thực hành</h2>
+                    <p>Bài tập giúp làm quen với File Explorer và những thao tác nền tảng để tổ chức dữ liệu cá nhân. Thư mục thực hành được đặt tên theo mẫu <code>ThucHanh_HoTenSinhVien</code>; bên trong có các tệp văn bản và thư mục con <code>TaiLieu</code>.</p>
+                    <div class="report-callout">
+                        <p><strong>Mục tiêu:</strong> Biết phân biệt sao chép với di chuyển, hiểu cơ chế Recycle Bin và hình thành quy tắc đặt tên tệp dễ nhận biết.</p>
+                    </div>
+                </section>
+
+                <section id="steps" class="report-section">
+                    <h2>Các bước thực hiện</h2>
+                    <ol class="step-list">
+                        <li><strong>Mở File Explorer.</strong> Nhấn <kbd>Windows + E</kbd> hoặc chọn biểu tượng thư mục trên thanh tác vụ.</li>
+                        <li><strong>Truy cập ổ đĩa hoặc Documents.</strong> Chọn <em>This PC</em>, sau đó mở ổ D:, E: hoặc thư mục Documents nếu máy chỉ có ổ C:.</li>
+                        <li><strong>Tạo thư mục mới.</strong> Nhấp chuột phải vào vùng trống, chọn <em>New → Folder</em>, đặt tên <code>ThucHanh_NguyenVanA</code>.</li>
+                        <li><strong>Mở thư mục thực hành.</strong> Nhấp đúp vào thư mục vừa tạo để bắt đầu tổ chức dữ liệu.</li>
+                        <li><strong>Tạo tệp văn bản.</strong> Chọn <em>New → Text Document</em>, đặt tên ban đầu là <code>GhiChu.txt</code>.</li>
+                        <li><strong>Đổi tên tệp.</strong> Dùng lệnh <em>Rename</em> để đổi thành <code>GhiChuQuanTrong.txt</code>, giúp tên phản ánh rõ mục đích.</li>
+                        <li><strong>Tạo thư mục con.</strong> Tạo thư mục <code>TaiLieu</code> bên trong thư mục thực hành để phân loại tệp.</li>
+                        <li><strong>Sao chép tệp.</strong> Chọn <code>GhiChuQuanTrong.txt</code>, nhấn <kbd>Ctrl + C</kbd>, mở <code>TaiLieu</code> và nhấn <kbd>Ctrl + V</kbd>. Tệp gốc vẫn còn ở vị trí cũ.</li>
+                        <li><strong>Di chuyển tệp.</strong> Tạo <code>DiChuyen.txt</code>, nhấn <kbd>Ctrl + X</kbd>, mở <code>TaiLieu</code> và nhấn <kbd>Ctrl + V</kbd>. Tệp không còn ở vị trí ban đầu.</li>
+                        <li><strong>Xóa vào Thùng rác.</strong> Chọn <code>GhiChuQuanTrong.txt</code> trong <code>TaiLieu</code> và dùng lệnh <em>Delete</em>. Tệp được chuyển vào Recycle Bin.</li>
+                        <li><strong>Xóa vĩnh viễn.</strong> Chọn <code>DiChuyen.txt</code> và nhấn <kbd>Shift + Delete</kbd>. Hệ thống yêu cầu xác nhận vì tệp không đi qua Recycle Bin.</li>
+                        <li><strong>Khôi phục tệp.</strong> Mở Recycle Bin, chọn <code>GhiChuQuanTrong.txt</code> và dùng <em>Restore</em>. Tệp quay lại vị trí trước khi bị xóa.</li>
+                    </ol>
+                </section>
+
+                <section id="comparison" class="report-section">
+                    <h2>Phân biệt Copy, Cut và Paste</h2>
+                    <div class="table-scroll">
+                        <table class="report-table">
+                            <thead><tr><th>Thao tác</th><th>Ý nghĩa</th><th>Kết quả</th><th>Phím tắt</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>Copy</strong></td><td>Tạo một bản sao của dữ liệu.</td><td>Dữ liệu gốc vẫn được giữ ở vị trí ban đầu.</td><td><kbd>Ctrl + C</kbd></td></tr>
+                                <tr><td><strong>Cut</strong></td><td>Lấy dữ liệu khỏi vị trí hiện tại để chuyển đi.</td><td>Dữ liệu biến mất khỏi vị trí cũ sau khi dán.</td><td><kbd>Ctrl + X</kbd></td></tr>
+                                <tr><td><strong>Paste</strong></td><td>Đưa dữ liệu đã sao chép hoặc cắt vào vị trí đích.</td><td>Hoàn tất quá trình sao chép hoặc di chuyển.</td><td><kbd>Ctrl + V</kbd></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="evidence" class="report-section">
+                    <h2>Minh chứng thực hành</h2>
+                    <figure>
+                        <img src="assets/images/task-1.png" alt="Thao tác tạo thư mục mới trong File Explorer">
+                        <figcaption>Tạo thư mục mới bằng menu New → Folder trong thư mục thực hành.</figcaption>
+                    </figure>
+                </section>
+
+                <section id="result" class="report-section">
+                    <h2>Kết quả và kỹ năng đạt được</h2>
+                    <p>Sau bài thực hành, các kỹ năng đạt được gồm tổ chức thư mục nhiều cấp, đặt tên tệp theo mục đích, dùng phím tắt để thao tác nhanh và lựa chọn cách xóa phù hợp. Việc hiểu rõ Copy, Cut và Restore giúp giảm nguy cơ mất dữ liệu do thao tác nhầm.</p>
+                    <div class="download-panel">
+                        <p><strong>Tài liệu gốc:</strong> Báo cáo Word chứa toàn bộ chuỗi ảnh minh chứng.</p>
+                        <a class="button button-small" href="assets/documents/task-1.docx">Xem / tải báo cáo</a>
+                    </div>
+                </section>
+
+                <nav class="task-pagination" aria-label="Điều hướng giữa các Task">
+                    <a href="portfolio.html">← Tổng quan Projects</a>
+                    <a href="task-2.html">Task 2 →</a>
+                </nav>
+            </div>
+        </div>
+    </main>
+    <footer class="site-footer"><div class="container footer-wrapper"><p>&copy; 2026 Lưu Quang Thịnh.</p><ul class="social-links"><li><a href="https://www.facebook.com/thinh.luuquang.33" target="_blank" rel="noopener noreferrer">Facebook</a></li><li><a href="https://github.com/shibaizabest" target="_blank" rel="noopener noreferrer">GitHub</a></li><li><a href="mailto:25020407@vnu.edu.vn">Email</a></li></ul></div></footer>
+</body>
+</html>
